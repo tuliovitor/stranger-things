@@ -1,0 +1,528 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Benguiat";
+  src: url(fonts/BenguiatBold.ttf);
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+body {
+  background-color: #0c0102;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Poppins";
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 4vw;
+  position: absolute;
+  z-index: 9;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  padding: 7vw;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  gap: 12px;
+  border: none;
+  outline: none;
+  padding: 16px 0px;
+  border-bottom: 1px solid white;
+}
+
+#preloader {
+width: 100%;
+height: 100vh;
+background-color: #0C0102;
+position: fixed;
+top: 0;
+left: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 9999;
+
+svg {
+  width: 40vw;
+  height: auto;
+
+  path {
+    fill: rgba(168, 19, 19, 0.364);
+    stroke: rgb(168, 19, 19);
+    stroke-dasharray: 1150;
+    stroke-dashoffset: 1150;
+  }
+}
+}
+
+.bg-monstro {
+  background-image: url("images/bg-sec2.webp");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+  background-color: #0C0102;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.hero {
+  width: 100%;
+  background-position: 50% 0%;
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7vw 7vw 7vw;
+  position: relative;
+
+  picture {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+
+      img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center 10%;
+          position: absolute;
+      }
+  }
+
+  .esquerda,
+  .direita {
+      width: 30%;
+      z-index: 3;
+  }
+
+  .esquerda {
+      h3 {
+          font-size: 24px;
+          font-weight: 500;
+          letter-spacing: 4px;
+      }
+
+      h1 {
+          font-size: 3.7vw;
+          font-family: "Benguiat";
+      }
+  }
+
+  .direita {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+
+      p {
+          font-size: 2vw;
+          margin-bottom: 32px;
+          text-align: end;
+      }
+  }
+}
+
+.hero:before {
+  content: "";
+  background: linear-gradient(180deg, rgba(12, 1, 2, 0.00) 0%, #0C0102 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
+
+.secao-cidade {
+  flex-direction: column;
+
+  .titulo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .cards {
+      margin-top: 52px;
+      display: flex;
+      justify-content: space-between;
+
+      .card {
+          background-image: url("images/card1.webp");
+          width: 32%;
+          aspect-ratio: 16/9;
+          background-size: cover;
+          background-position: center;
+          display: flex;
+          align-items: end; /* ← Já está correto - alinha no fundo */
+          justify-content: space-between;
+          padding: 20px;
+      }
+
+      h3 {
+          font-size: 14px;
+          max-width: 150px;
+        }
+
+      p {
+          font-size: 12px;
+          text-align: end;
+      }
+
+      .card:nth-child(2) {
+          background-image: url("images/card2.webp");
+      }
+
+      .card:nth-child(3) {
+          background-image: url("images/card3.webp");
+      }
+  }
+}
+
+.secao-depoimentos {
+  flex-direction: column;
+
+  .logotipos {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+  }
+
+ .depoimentos {
+     margin-top: 62px;
+     display: flex;
+     justify-content: space-between;
+     
+     .depoimento {
+         width: 31%;
+     }
+ }
+}
+
+.secao-obrigado {
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+  background-color: #0c0102;
+
+  h2 {
+      margin-bottom: 40px;
+      text-align: center; /* ← Centraliza o título em todas as resoluções */
+  }
+
+  ul {
+      display: flex;
+      flex-wrap: wrap; /* ← Permite que as cidades quebrem linha */
+      width: 100%;
+      justify-content: center; /* ← Centraliza as cidades */
+      gap: 24px 32px; /* ← gap vertical e horizontal */
+      max-width: 1200px; /* ← Limita a largura máxima */
+      
+      li {
+          font-size: 16px; /* ← Tamanho de fonte consistente */
+      }
+  }
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("images/bg-footer.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  .conteudo-footer {
+      display: flex;
+      width: 100%;
+      padding: 7vw;
+
+      .logo-footer {
+          width: 30%;
+          h3 {
+              font-size: 24px;
+              font-weight: 500;
+              letter-spacing: 4px;
+          }
+  
+          h2 {
+              font-size: 3.7vw;
+              font-family: "Benguiat";
+          }
+      }
+
+      .secoes-footer {
+          display: flex;
+          flex: 1;
+          justify-content: end;
+          gap: 6%;
+          align-items: end;
+
+          h3 {
+              font-size: 16px;
+              font-weight: 500;
+              margin-bottom: 12px;
+          }
+
+          .social {
+
+              ul {
+                  display: flex;
+                  gap: 12px;
+              }
+          }
+      }
+  }
+
+  .logotipos-footer {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 4vw;
+  }
+
+  .texto-infinito {
+      width: max-content;
+      display: flex;
+
+      h3 {
+          color: rgb(191, 191, 191);
+          font-size: 12vw;
+          font-family: "Benguiat", sans-serif;
+          mix-blend-mode: color-dodge;
+          animation: texto-infinito 10s infinite linear;
+          padding-left: 8vw;
+      }
+  }
+}
+
+@keyframes texto-infinito {
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 1500px) {
+  .secao-cidade {
+    padding: 4vw;
+  }
+}
+
+@media (max-width: 1400px) {
+  .secao-cidade .cards .card {
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+  }
+}
+
+/* ← TABLET */
+@media (max-width: 1024px) {
+  #preloader svg {
+    width: 60vw;
+  }
+
+  .secao-obrigado ul {
+    gap: 20px 28px; /* ← Ajusta espaçamento para tablets */
+    
+    li {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 4vw;
+  }
+  
+  h2 {
+    font-size: 6vw;
+  }
+
+  header h2 {
+    font-size: 28px;
+  }
+
+  #preloader svg {
+    width: 80vw;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 26% 4vw 0;
+
+    .esquerda,
+    .direita {
+      width: 100%;
+    }
+
+    .esquerda {
+      h3,
+      h1 {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 12vw;
+      }
+    }
+
+    .direita {
+      align-items: start;
+      p {
+        font-size: 5.5vw;
+        text-align: start;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .secao-cidade {
+    margin-top: 80px;
+    button {
+      display: none;
+    }
+
+    .cards {
+      margin-top: 20px;
+      flex-direction: column;
+      gap: 20px;
+
+      .card {
+        width: 100%;
+        flex-direction: row; /* ← Mantém horizontal no mobile */
+        align-items: end; /* ← Alinha no fundo */
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .secao-depoimentos {
+    .logotipos {
+      img:nth-child(1),
+      img:nth-child(3) {
+        width: 20%;
+      }
+      img:nth-child(2) {
+        width: 40%;
+      }
+    }
+
+    .depoimentos {
+      flex-direction: column;
+      gap: 48px;
+
+      .depoimento {
+        width: 100%;
+      }
+    }
+  }
+
+  .secao-obrigado {
+    margin: 40px 0px 60px;
+
+    h2 {
+      text-align: center;
+      font-size: 5vw; /* ← Ajusta tamanho do título no mobile */
+    }
+
+    ul {
+      gap: 16px 24px; /* ← Espaçamento menor no mobile */
+      
+      li {
+        font-size: 14px; /* ← Tamanho menor no mobile */
+      }
+    }
+  }
+
+  footer {
+    padding-top: 40px;
+    .conteudo-footer {
+      padding: 4vw;
+      flex-direction: column;
+
+      .logo-footer {
+        width: 100%;
+
+        h2,
+        h3 {
+          text-align: center;
+        }
+        h2 {
+          font-size: 12vw;
+        }
+      }
+
+      .secoes-footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+
+        .social {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin: 40px 0px 32px;
+        }
+
+        .institucional {
+          width: 40%;
+        }
+
+        .parceiro {
+          width: 50%;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .logotipos-footer {
+      margin-top: 40px;
+    }
+
+    .texto-infinito h3{
+      font-size: 20vw;
+    }
+  }
+}
