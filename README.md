@@ -4,7 +4,7 @@
 
 **Uma landing page temática com preloader SVG animado, ScrollSmoother e SplitText.**
 
-![Preview do projeto](./assets/preview-desktop.png)
+![Preview do projeto](./images/preview-desktop.png)
 
 [![Deploy](https://img.shields.io/badge/🚀_Deploy-GitHub_Pages-222?style=for-the-badge)](https://tuliovitor.github.io/stranger-things)
 [![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
@@ -32,7 +32,7 @@ O projeto não replica apenas o visual — cada decisão de animação tem uma i
 
 | Desktop | Mobile |
 |---|---|
-| ![Desktop](./assets/preview-desktop.png) | ![Mobile](./assets/preview-mobile.jpg) |
+| ![Desktop](./images/preview-desktop.png) | ![Mobile](./images/preview-mobile.jpg) |
 
 ---
 
